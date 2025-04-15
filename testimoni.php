@@ -45,7 +45,7 @@ if (file_exists($filename)) {
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/style.css" />
     <style>
     .testimoni-card {
       border-radius: 1rem;
