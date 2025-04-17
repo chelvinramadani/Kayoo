@@ -111,13 +111,13 @@ function filterProduk(kategori) {
   const buttons = document.querySelectorAll(".btn-group .btn");
   buttons.forEach((btn) => btn.classList.remove("active"));
 
-  event.target.classList.add("active");
-
-  if (kategori === "all") {
-    tampilkanProduk(produkList);
-  } else {
-    const filtered = produkList.filter((p) => p.kategori === kategori);
-    tampilkanProduk(filtered);
+  function filterProduk(kategori) {
+    if (kategori === "all") {
+      tampilkanProduk(produkList);
+    } else {
+      const filtered = produkList.filter((p) => p.kategori === kategori);
+      tampilkanProduk(filtered);
+    }
   }
 }
 
