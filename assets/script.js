@@ -108,16 +108,11 @@ function bukaDetailProduk(item) {
 }
 
 function filterProduk(kategori) {
-  const buttons = document.querySelectorAll(".btn-group .btn");
-  buttons.forEach((btn) => btn.classList.remove("active"));
-
-  function filterProduk(kategori) {
-    if (kategori === "all") {
-      tampilkanProduk(produkList);
-    } else {
-      const filtered = produkList.filter((p) => p.kategori === kategori);
-      tampilkanProduk(filtered);
-    }
+  if (kategori === "all") {
+    tampilkanProduk(produkList);
+  } else {
+    const filtered = produkList.filter((p) => p.kategori === kategori);
+    tampilkanProduk(filtered);
   }
 }
 
