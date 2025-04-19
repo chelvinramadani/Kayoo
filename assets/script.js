@@ -108,11 +108,6 @@ function bukaDetailProduk(item) {
 }
 
 function filterProduk(kategori) {
-  const buttons = document.querySelectorAll(".btn-group .btn");
-  buttons.forEach((btn) => btn.classList.remove("active"));
-
-  event.target.classList.add("active");
-
   if (kategori === "all") {
     tampilkanProduk(produkList);
   } else {

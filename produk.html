@@ -86,39 +86,18 @@
 
           <!-- Filter Kategori -->
           <div class="row mb-4">
-            <div class="col text-center">
-              <div class="btn-group" role="group" aria-label="Filter Produk">
-                <button
-                  class="btn btn-outline-success active"
-                  onclick="filterProduk('all')"
-                >
-                  Semua
-                </button>
-                <button
-                  class="btn btn-outline-success"
-                  onclick="filterProduk('kaligrafi')"
-                >
-                  Kaligrafi
-                </button>
-                <button
-                  class="btn btn-outline-success"
-                  onclick="filterProduk('dekorasi')"
-                >
-                  Dekorasi
-                </button>
-                <button
-                  class="btn btn-outline-success"
-                  onclick="filterProduk('sign')"
-                >
-                  Sign
-                </button>
-                <button
-                  class="btn btn-outline-success"
-                  onclick="filterProduk('lainnya')"
-                >
-                  Lainnya
-                </button>
-              </div>
+            <div class="col-md-6 offset-md-3">
+              <select
+                class="form-select text-center py-2 px-3 shadow-sm border-success"
+                style="font-size: 1rem; border-radius: 0.5rem"
+                onchange="filterProduk(this.value)"
+              >
+                <option value="all" selected>Semua Kategori</option>
+                <option value="kaligrafi">Kaligrafi</option>
+                <option value="dekorasi">Dekorasi</option>
+                <option value="sign">Sign</option>
+                <option value="lainnya">Lainnya</option>
+              </select>
             </div>
           </div>
 
@@ -148,7 +127,7 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="assets/script.js"></script>
     <!-- Modal Detail Produk -->
     <div
       class="modal fade"
@@ -182,8 +161,8 @@
               </div>
               <div class="col-md-6">
                 <h4 id="modalNama" class="fw-bold mb-3"></h4>
-                <p id="modalKategori" class="text-muted mb-2"></p>
                 <p id="modalHarga" class="text-success fs-5 fw-semibold"></p>
+                <p id="modalKategori" class="text-muted mb-2"></p>
                 <p id="modalDeskripsi" class="text-muted small"></p>
                 <a href="pesan.html" class="btn btn-success mt-3"
                   >Pesan Sekarang</a
